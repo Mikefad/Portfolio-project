@@ -1,0 +1,15 @@
+{
+    "builds": [
+      {
+        "src": "tailwind-portfolio/package.json",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "tailwind-portfolio/$1"
+      }
+    ]
+  }
+  
