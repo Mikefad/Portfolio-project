@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+
+
+/* @keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+
+.typing-animation {
+  animation: typing 3s steps(30) infinite, blink 0.75s step-end infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid black;
+} */
+
+
+/* styles.css or your custom CSS file */
+/* @keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Apply animation */
+/* .typing-animation {
+ 
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(50) 1s infinite; 
+  min-width: 100%; 
+  word-wrap: break-word; 
+}  */
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typing-animation { 
+  overflow: hidden;
+  white-space: nowrap;  
+  animation: typing 4s steps(35) 3s infinite;  
+  word-wrap: break-word; 
+}
+
+/* .typing-animation2 {
+  overflow: hidden;
+  white-space: nowrap;  
+  animation: typing 1s steps(12) 0s infinite;  
+  animation-delay: 4s; 
+} */
+
