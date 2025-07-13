@@ -32,7 +32,7 @@ function Porthome(){
         className="absolute top-0 left-0 w-full h-screen object-cover -z-10 transition-opacity duration-700"
         style={{ width: "100%", height: "100%", objectFit: "cover" }}
         >
-        <source src={herovid} type="video/mp4" />
+        <source src="https://res.cloudinary.com/dcbk2d6pl/video/upload/f_auto,q_auto:eco/87786-602074234_medium_cdaf6a.mp4" type="video/mp4" />
         </video>
 
         <main>
@@ -189,7 +189,9 @@ function Porthome(){
 
                             <div class="font-bold text-[#42ad9c] text-[19px] lg:text-[25px] mt-6 mb-2">Demo</div>
                             <video controls class="mt-2 w-full rounded-md">
-                                <source src={financemanager} type="video/mp4" />
+                                <source src="https://res.cloudinary.com/dcbk2d6pl/video/upload/f_auto,q_auto:eco/Vite_React_-_Google_Chrome_2025-05-07_23-01-28_jnquiw.mp4" type="video/mp4" />
+                                
+
                                 Your browser does not support the video tag.
                             </video>
                         </div>
