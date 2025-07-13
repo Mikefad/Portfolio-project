@@ -1,57 +1,47 @@
 import {Link} from 'react-scroll';
+import figmaProjectImg from './assets/Screenshot (97).png';
+import automationBotImg from './assets/Screenshot (107).png';
+import consultingSiteImg from './assets/Screenshot (104).png';
+
+import Header from './header';
+import herovid from './assets/87786-602074234_medium.mp4';
+import financemanager from './assets/Vite + React - Google Chrome 2025-05-07 23-01-28.mp4';
+import tableau from './assets/Screenshot (64).png';
+import excell from './assets/Screenshot (69).png';
+import about from './assets/WhatsApp Image 2025-03-08 at 20.11.23.jpeg';
+import phoneicon from './assets/WhatsApp Image 2025-03-09 at 20.40.41.jpeg';
+import emailIcon from './assets/WhatsApp Image 2025-03-09 at 21.09.23.jpeg';
+import linkedin from './assets/linkedin.png';
+import github from './assets/github.png';
+import Ig from './assets/social.png';
+import officegirl from './assets/officegirl.jpeg';
+import stock1 from './assets/AdobeStock_637224841_Preview.jpeg';
+import stock2 from './assets/AdobeStock_136828609_Preview.jpeg';
 
 function Porthome(){
     
     return(
         <>
 
-            <header className="sticky top-0 z-50 bg-[#f8f8f8] shadow-md px-4 lg:px-8">
-            <div className="flex items-center justify-between py-3">
-                {/* Logo */}
-                <div className="text-[#07285b] text-3xl lg:text-5xl font-bold cursor-pointer">
-                <Link to="intro" spy={true} smooth={true} offset={-150} duration={500}>
-                    ℳdev
-                </Link>
-                </div>
-
-                {/* Navigation */}
-                <nav>
-                <ul className="flex items-center space-x-5 lg:space-x-8 text-sm lg:text-lg font-medium">
-                    <li className="hover:text-gray-400 transition cursor-pointer">
-                    <Link to="portfolio" spy={true} smooth={true} offset={-5} duration={500}>
-                        Portfolio
-                    </Link>
-                    </li>
-                    <li className="hover:text-gray-400 border border-indigo-700 py-2 px-4 rounded-full  transition cursor-pointer">
-                    <Link to="about" spy={true} smooth={true} offset={-43} duration={500}>
-                        About
-                    </Link>
-                    </li>
-                    <li className="hover:text-gray-400 transition cursor-pointer">
-                    <Link to="contact" spy={true} smooth={true} offset={50} duration={500}>
-                        Contact
-                    </Link>
-                    </li>
-                </ul>
-                </nav>
-            </div>
-            </header>
+        <Header/>
+        <video
+        id="vid2"
+        autoPlay
+        loop
+        muted
+        className="absolute top-0 left-0 w-full h-screen object-cover -z-10 transition-opacity duration-700"
+        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        >
+        <source src={herovid} type="video/mp4" />
+        </video>
 
         <main>
             <section id="intro" className="relative overflow-hidden">
                 {/* Video Background */}
-                <video
-                id="vid2"
-                autoPlay
-                loop
-                muted
-                className="absolute top-0 left-0 w-full h-[450px] object-cover -z-10"
-                >
-                <source src="./src/assets/87786-602074234_medium.mp4" type="video/mp4" />
-                </video>
+                
 
                 {/* Hero Content */}
-                <div className="relative px-4 pt-24 lg:pt-36 lg:pl-36 max-w-7xl mx-auto md:ml-10 text-left text-black z-10">
+                <div className="relative px-4 pt-24 lg:pt-25 lg:pl-36 max-w-7xl mx-auto md:ml-10 text-left text-black z-10">
                 <h1 className="text-indigo-600 mb-2 text-lg lg:text-xl font-semibold">
                     Building the future of the web, one pixel at a time.
                 </h1>
@@ -73,7 +63,7 @@ function Porthome(){
                 </p>
                 </div>
 
-                <hr className="mx-auto mt-20 w-1/2 border-black" />
+                <hr className="mx-auto mt-30 w-1/2 " />
             </section>
         
 
@@ -95,65 +85,76 @@ function Porthome(){
                     <hr class="w-14 h-[2px] bg-black mx-auto mb-10"/>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {/* <!-- Frontend Development --> */}
+                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                            <h3 class="text-xl text-blue-800 font-semibold mb-2 text-center">Frontend Development</h3>
+                            <ul class="list-disc list-inside text-gray-700">
+                            <li>HTML & CSS</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>Tailwind CSS</li>
+                            <li>React.js</li>
+                            </ul>
+                        </div>
+
                         {/* <!-- Backend Development --> */}
                         <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                        <h3 class="text-xl text-blue-800 font-semibold mb-2 text-center">Backend Development</h3>
-                        <ul class="list-disc list-inside text-gray-700">
+                            <h3 class="text-xl text-blue-800 font-semibold mb-2 text-center">Backend Development</h3>
+                            <ul class="list-disc list-inside text-gray-700">
                             <li>PHP, Node.js</li>
                             <li>Authentication & Authorization</li>
                             <li>RESTful APIs, CRUD Operations</li>
-                        </ul>
+                            </ul>
                         </div>
 
                         {/* <!-- Other Programming Languages --> */}
                         <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                        <h3 class="text-xl text-blue-800 font-semibold mb-2 text-center">Other Programming Languages</h3>
-                        <ul class="list-disc list-inside text-gray-700">
+                            <h3 class="text-xl text-blue-800 font-semibold mb-2 text-center">Other Programming Languages</h3>
+                            <ul class="list-disc list-inside text-gray-700">
                             <li>Python</li>
                             <li>C++</li>
-                        </ul>
+                            </ul>
                         </div>
 
                         {/* <!-- Databases --> */}
                         <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                        <h3 class="text-xl text-blue-800 font-semibold mb-2 text-center">Databases</h3>
-                        <ul class="list-disc list-inside text-gray-700">
+                            <h3 class="text-xl text-blue-800 font-semibold mb-2 text-center">Databases</h3>
+                            <ul class="list-disc list-inside text-gray-700">
                             <li>MySQL</li>
                             <li>MongoDB</li>
-                        </ul>
+                            </ul>
                         </div>
 
                         {/* <!-- Version Control --> */}
                         <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                        <h3 class="text-xl text-blue-800 font-semibold mb-2 text-center">Version Control</h3>
-                        <ul class="list-disc list-inside text-gray-700">
+                            <h3 class="text-xl text-blue-800 font-semibold mb-2 text-center">Version Control</h3>
+                            <ul class="list-disc list-inside text-gray-700">
                             <li>Git</li>
                             <li>GitHub</li>
-                        </ul>
+                            </ul>
                         </div>
 
                         {/* <!-- Tools & Environments --> */}
                         <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                        <h3 class="text-xl text-blue-800 font-semibold mb-2 text-center">Tools & Environments</h3>
-                        <ul class="list-disc list-inside text-gray-700">
+                            <h3 class="text-xl text-blue-800 font-semibold mb-2 text-center">Tools & Environments</h3>
+                            <ul class="list-disc list-inside text-gray-700">
                             <li>VS Code, Postman</li>
                             <li>npm, Webpack</li>
-                        </ul>
+                            </ul>
                         </div>
 
                         {/* <!-- Data Analytics --> */}
                         <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
                             <h3 class="text-xl text-blue-800 font-semibold mb-2 text-center">Data Analytics</h3>
                             <ul class="list-disc list-inside text-gray-700">
-                                <li>Excel</li>
-                                <li>Tableau</li>
-                                <li>Power BI</li>
-                                <li>Pandas (Python)</li>
-                                <li>Web Scraping</li>
+                            <li>Excel</li>
+                            <li>Tableau</li>
+                            <li>Power BI</li>
+                            <li>Pandas (Python)</li>
+                            <li>Web Scraping</li>
                             </ul>
                         </div>
-
                     </div>
+
                     </div>
                 </div>
 
@@ -188,7 +189,7 @@ function Porthome(){
 
                             <div class="font-bold text-[#42ad9c] text-[19px] lg:text-[25px] mt-6 mb-2">Demo</div>
                             <video controls class="mt-2 w-full rounded-md">
-                                <source src="./src/assets/Vite + React - Google Chrome 2025-05-06 17-20-31.mp4" type="video/mp4" />
+                                <source src={financemanager} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -221,8 +222,8 @@ function Porthome(){
 
                             <div class="font-bold text-[19px] lg:text-[25px] mt-4 mb-2">Screenshots</div>
                             <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                                <img src="./src/assets/Screenshot (64).png" alt="Dashboard Overview" class="rounded-lg shadow-md" />
-                                <img src="./src/assets/Screenshot (69).png" alt="Neighborhood Analysis" class="rounded-lg shadow-md" />
+                                <img src={tableau} alt="Dashboard Overview" class="rounded-lg shadow-md" />
+                                <img src={excell} alt="Neighborhood Analysis" class="rounded-lg shadow-md" />
                             </div>
 
                             <div class="font-bold text-[19px] lg:text-[25px] mt-6 mb-2">Explore the Dashboard</div>
@@ -242,6 +243,74 @@ function Porthome(){
             </section>
             <hr class="mx-auto bg-black lg:mt-[100px] mt-[70px] mb-[70px] w-1/2"></hr>
 
+            {/* <!-- More Projects Section --> */}
+            
+            <section id="more-projects" class="w-full px-4 lg:px-6 mt-12 lg:mt-16">
+            <div class="text-white text-center">
+                <h2 class="text-[24px] lg:text-[40px] font-bold text-[#42ad9c] mb-2">More Projects</h2>
+                <p class="text-[#868ead] text-[14px] lg:text-[18px] mb-8">
+                A few additional projects demonstrating a variety of skills and tools.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* <!-- Project 1: Figma to Website --> */}
+            <div class="bg-[#1e1e2f] text-white rounded-lg shadow-lg shadow-gray-900 overflow-hidden">
+                <img src={figmaProjectImg} alt="Figma to Website" class="w-full h-48 object-cover" />
+                <div class="p-6">
+                <h3 class="text-[20px] lg:text-[24px] font-bold text-[#42ad9c]">Figma to Pixel-Perfect Website</h3>
+                <p class="text-[#868ead] text-[13px] lg:text-[15px] mt-4">
+                    A responsive web UI converted from a Figma design with pixel accuracy, animations, and clean components.
+                </p>
+                <p class="text-[#8d8d91] mt-4 text-[13px] lg:text-[14px]">
+                    Tech: React, JavaScript, Tailwind CSS, Vercel
+                </p>
+                <a href="https://raintor-project.vercel.app/" target="_blank" class="text-[#60a5fa] mt-4 block text-[13px] lg:text-[14px] hover:underline">
+                    Visit Live Site &rarr;
+                </a>
+                </div>
+            </div>
+
+            {/* <!-- Project 2: Zoom Bot Automation --> */}
+            <div class="bg-[#1e1e2f] text-white rounded-lg shadow-lg shadow-gray-900 overflow-hidden">
+                <img src={automationBotImg} alt="Zoom Bot Automation" class="w-full h-48 object-cover" />
+                <div class="p-6">
+                <h3 class="text-[20px] lg:text-[24px] font-bold text-[#42ad9c]">Zoom Bot Automation</h3>
+                <p class="text-[#868ead] text-[13px] lg:text-[15px] mt-4">
+                    A Python-based bot that automatically joins Zoom meetings using meeting links, time schedules, and credentials.
+                </p>
+                <p class="text-[#8d8d91] mt-4 text-[13px] lg:text-[14px]">
+                    Tech: Python, Selenium, Schedule
+                </p>
+                <a href="https://github.com/Mikefad/zoom-bot-automation" target="_blank" class="text-[#60a5fa] mt-4 block text-[13px] lg:text-[14px] hover:underline">
+                    View Project on GitHub &rarr;
+                </a>
+                </div>
+            </div>
+
+            {/* <!-- Project 3: Consulting Agency Website --> */}
+            <div class="bg-[#1e1e2f] text-white rounded-lg shadow-lg shadow-gray-900 overflow-hidden">
+                <img src={consultingSiteImg} alt="Consulting Website" class="w-full h-48 object-cover" />
+                <div class="p-6">
+                <h3 class="text-[20px] lg:text-[24px] font-bold text-[#42ad9c]">Consulting Agency Website</h3>
+                <p class="text-[#868ead] text-[13px] lg:text-[15px] mt-4">
+                    A sleek and scalable website for a modern consulting firm, with service sections, team profiles, and contact forms.
+                </p>
+                <p class="text-[#8d8d91] mt-4 text-[13px] lg:text-[14px]">
+                    Tech: React, Firebase, JavaScript, Tailwind CSS, Vercel
+                </p>
+                <a href="https://consulting-agency-website.vercel.app/" target="_blank" class="text-[#60a5fa] mt-4 block text-[13px] lg:text-[14px] hover:underline">
+                    Visit Live Site &rarr;
+                </a>
+                </div>
+            </div>
+            </div>
+
+            </section>
+
+            <hr class="mx-auto bg-black lg:mt-[100px] mt-[70px] mb-[70px] w-1/2"/>
+
+
 
 
             <section id="about" class="pt-12 lg:pt-20 mt-12 lg:mt-16 px-4 lg:px-6 lg:ml-[150px] w-full lg:w-[75%] text-left">
@@ -249,7 +318,7 @@ function Porthome(){
 
                     {/* <!-- lg layout: image and Me stacked --> */}
                     <div class="hidden lg:flex items-start gap-6">
-                    <img src="./src/assets/WhatsApp Image 2025-03-08 at 20.11.23.jpeg" alt="Portrait of Michael"
+                    <img src={about} alt="Portrait of Michael"
                         class="w-full max-w-sm object-cover rounded-md transform -translate-y-24" />
                     <div class="flex flex-col">
                         <h2 class="text-indigo-600 text-[70px] font-bold">Me</h2>
@@ -266,7 +335,7 @@ function Porthome(){
 
                     {/* <!-- md layout: image and Me side by side --> */}
                     <div class="hidden md:flex lg:hidden flex-row items-center gap-4 max-w-5xl mx-auto">
-                    <img src="./src/WhatsApp Image 2025-03-08 at 20.11.23.jpeg" alt="Portrait of Michael"
+                    <img src={about} alt="Portrait of Michael"
                         class="w-full max-w-xs object-cover rounded-md transform -translate-y-8" />
                     <h2 class="text-indigo-600 text-5xl font-bold">Me</h2>
                     </div>
@@ -283,7 +352,7 @@ function Porthome(){
 
                     {/* <!-- sm layout: stacked --> */}
                     <div class="flex flex-col md:hidden">
-                    <img src="./src/WhatsApp Image 2025-03-08 at 20.11.23.jpeg" alt="Portrait of Michael"
+                    <img src={about} alt="Portrait of Michael"
                         class="w-full max-w-xs object-cover rounded-md transform -translate-y-8" />
                     <h2 class="text-indigo-600 text-4xl font-bold mt-4">Me</h2>
                     <hr class="bg-white h-[2px] w-[100px] my-4"/>
@@ -320,7 +389,7 @@ function Porthome(){
 
                         <div class="flex justify-center mb-6">
                             <div class="flex items-center space-x-4 max-w-md w-full">
-                            <img src="./src/assets/WhatsApp Image 2025-03-09 at 20.40.41.jpeg" alt="Phone" class="w-10 h-10 sm:w-12 sm:h-12" />
+                            <img src={phoneicon} alt="Phone" class="w-10 h-10 sm:w-12 sm:h-12" />
                             <div class="text-left">
                                 <div class="text-indigo-600 text-lg sm:text-xl font-semibold">Phone</div>
                                 <div class="text-sm sm:text-base">+234 81 6438 5796</div>
@@ -331,7 +400,7 @@ function Porthome(){
                         {/* <!-- Email --> */}
                         <div class="flex justify-center mb-15">
                             <div class="flex items-center space-x-4 max-w-md w-full">
-                            <img src="./src/assets/WhatsApp Image 2025-03-09 at 21.09.23.jpeg" alt="Email" class="w-10 h-10 sm:w-12 sm:h-12" />
+                            <img src={emailIcon} alt="Email" class="w-10 h-10 sm:w-12 sm:h-12" />
                             <div class="text-left">
                                 <div class="text-indigo-600 text-lg sm:text-xl font-semibold">Email</div>
                                 <div class="text-sm sm:text-base">michealfadairo14@gmail.com</div>
@@ -344,15 +413,15 @@ function Porthome(){
                     {/* <!-- Social Links --> */}
                     <ul class="flex flex-wrap justify-center xl:justify-start mt-4">
                         <li class="p-4 flex items-center">
-                        <img src="./src/assets/linkedin.png" alt="LinkedIn" class="w-8 h-8 mr-2" />
+                        <img src={linkedin} alt="LinkedIn" class="w-8 h-8 mr-2" />
                         <a href="https://www.linkedin.com/in/michael-fadairo-292919347/">LinkedIn</a>
                         </li>
                         <li class="p-4 flex items-center">
-                        <img src="./src/assets/github.png" alt="GitHub" class="w-8 h-8 mr-2" />
+                        <img src={github} alt="GitHub" class="w-8 h-8 mr-2" />
                         <a href="https://github.com/Mikefad">GitHub</a>
                         </li>
                         <li class="p-4 flex items-center">
-                        <img src="./src/assets/social.png" alt="Instagram" class="w-8 h-8 mr-2" />
+                        <img src={Ig} alt="Instagram" class="w-8 h-8 mr-2" />
                         <a href="https://www.instagram.com/_michael_tech_/">Instagram</a>
                         </li>
                     </ul>
@@ -361,9 +430,9 @@ function Porthome(){
                 {/* <!-- Image Section - hidden until xl screens --> */}
 
                 <div class="hidden relative  xl:flex  w-full xl:w-1/2 justify-center mt-6">
-                    <img src="./src/assets/officegirl.jpeg" alt="Office Girl" class="lg:w-[400px] lg:h-[300px] lg:m-4 rounded-full  lg:translate-x-[110px]  w-[200px] h-[150px] m-2 translate-x-[3px] -translate-y-[63px]" />
-                    <img src="./src/assets/AdobeStock_637224841_Preview.jpeg" alt="Extra 1" class="lg:w-[150px] lg:h-[150px]   rounded-full lg:z-10 lg:-translate-x-[360px]  w-[75px] h-[75px]  z-10 -translate-x-[230px] -translate-y-[70px]" />
-                    <img src="./src/assets/AdobeStock_136828609_Preview.jpeg" alt="Extra 2" class="lg:w-[100px] lg:h-[100px]  rounded-full lg:z-10 lg:translate-y-[200px] lg:-translate-x-[430px]  w-[50px] h-[50px]  z-10 translate-y-[63px] -translate-x-[270px]" />
+                    <img src={officegirl} alt="Office Girl" class="lg:w-[400px] lg:h-[300px] lg:m-4 rounded-full  lg:translate-x-[110px]  w-[200px] h-[150px] m-2 translate-x-[3px] -translate-y-[63px]" />
+                    <img src={stock1} alt="Extra 1" class="lg:w-[150px] lg:h-[150px]   rounded-full lg:z-10 lg:-translate-x-[360px]  w-[75px] h-[75px]  z-10 -translate-x-[230px] -translate-y-[70px]" />
+                    <img src={stock2} alt="Extra 2" class="lg:w-[100px] lg:h-[100px]  rounded-full lg:z-10 lg:translate-y-[200px] lg:-translate-x-[430px]  w-[50px] h-[50px]  z-10 translate-y-[63px] -translate-x-[270px]" />
                    
                 </div>
 
