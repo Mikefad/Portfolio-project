@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+@keyframes pulse-slow { 0%,100%{ opacity:.18 } 50%{ opacity:.28 } }
+@keyframes pulse-slower { 0%,100%{ opacity:.12 } 50%{ opacity:.22 } }
+.animate-pulse-slow{ animation: pulse-slow 8s ease-in-out infinite; }
+.animate-pulse-slower{ animation: pulse-slower 12s ease-in-out infinite; }
+
 
 /* @keyframes typing {
   0% {
@@ -50,21 +55,39 @@
 }  */
 
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+/* Typing effect base */
+.typing,
+.typing-loop {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid currentColor;
 }
 
-.typing-animation { 
-  overflow: hidden;
-  white-space: nowrap;  
-  animation: typing 4s steps(35) 3s infinite;  
-  word-wrap: break-word; 
+/* One-shot typing (stops at full width) */
+.typing {
+  animation:
+    typing var(--typing-duration, 2.4s) steps(var(--typing-steps, 24)) 0.2s 1 both,
+    caret-blink .8s step-end infinite;
 }
+
+/* Looping: type to full, then erase back to zero, forever */
+.typing-loop {
+  animation:
+    typing var(--typing-duration, 2.4s) steps(var(--typing-steps, 24)) 0.2s infinite alternate,
+    caret-blink .8s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to   { width: 100% }
+}
+
+@keyframes caret-blink {
+  0%, 100% { border-right-color: transparent; }
+  50%      { border-right-color: currentColor; }
+}
+
 
 /* .typing-animation2 {
   overflow: hidden;
