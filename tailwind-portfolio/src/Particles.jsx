@@ -85,6 +85,7 @@ export default function Particles({
 }) {
   const containerRef = useRef(null);
   const mouseRef = useRef({ x: 0, y: 0 });
+  const particleColorsKey = particleColors?.join(",") ?? "";
 
   useEffect(() => {
     const container = containerRef.current;
@@ -120,7 +121,7 @@ export default function Particles({
     const positions = new Float32Array(count * 3);
     const randoms = new Float32Array(count * 4);
     const colors = new Float32Array(count * 3);
-    const palette = particleColors && particleColors.length > 0 ? particleColors : defaultColors;
+    const palette = particleColorsKey ? particleColorsKey.split(",") : defaultColors;
 
     for (let i = 0; i < count; i++) {
       let x, y, z, len;
@@ -207,6 +208,7 @@ export default function Particles({
     sizeRandomness,
     cameraDistance,
     disableRotation,
+    particleColorsKey,
   ]);
 
   return <div ref={containerRef} className={`particles-container ${className}`} />;

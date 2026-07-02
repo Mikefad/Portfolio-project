@@ -1,7 +1,7 @@
 // src/sections/Hero.jsx
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowDownRight } from "lucide-react";
+import { ArrowDownRight, Download } from "lucide-react";
 import AnimatedText from "./effects/AnimatedText";
 import MagneticButton from "./effects/MagneticButton";
 import profileSrc from "./assets/face pic 3.jpg";
@@ -44,7 +44,7 @@ export default function Hero() {
         <div className="flex-1">
           <AnimatedText
             as="h1"
-            text={["Building the future of the web,", "one pixel at a time."]}
+            text={["I build SaaS products,", "automation, and web platforms."]}
             className="text-4xl md:text-6xl font-extrabold tracking-tight"
             typingIndex={1}
             typingSteps={24}
@@ -58,8 +58,9 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="mt-4 max-w-2xl text-slate-600"
           >
-            I’m <span className="font-semibold text-slate-900">Michael</span> — Full-stack Web Developer & budding Data
-            Analyst. I craft fast, accessible, animated experiences with React, Tailwind, and Python backends.
+            I’m <span className="font-semibold text-slate-900">Michael Fadairo</span> — a full-stack developer,
+            SaaS product builder, and founder of CodeBolt Systems. I turn business problems into reliable
+            products with React, Next.js, Vue/Nuxt, Python, Node.js, and modern cloud platforms.
           </motion.p>
 
           <motion.div
@@ -76,6 +77,14 @@ export default function Hero() {
               <ArrowDownRight size={18} className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
             <MagneticButton href="#contact">Let’s collaborate</MagneticButton>
+            <a
+              href="/Michael%20Fadairo%20CV.pdf"
+              download
+              className="inline-flex items-center gap-2 rounded-xl border border-slate-300 px-5 py-3 text-slate-700 transition hover:border-slate-500 hover:bg-white/50"
+            >
+              <Download size={18} />
+              Download CV
+            </a>
           </motion.div>
         </div>
 
@@ -107,13 +116,13 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Quick stats (unchanged) */}
+      {/* Quick overview */}
       <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
-          { k: "Projects", v: "10+" },
-          { k: "Techs", v: "React · Python" },
-          { k: "Focus", v: "Frontend/UI" },
-          { k: "Location", v: "NG / Remote" },
+          { k: "Focus", v: "SaaS · Automation" },
+          { k: "Core stack", v: "React · Python" },
+          { k: "Current work", v: "CodeBolt Systems" },
+          { k: "Location", v: "Lagos · Remote" },
         ].map((s, i) => (
           <motion.div
             key={s.k}

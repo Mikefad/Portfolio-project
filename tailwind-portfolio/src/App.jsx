@@ -5,6 +5,7 @@ import Header from "./header";
 import Hero from "./Hero";
 import SkillsLoop from "./SkillsLoop";
 import Portfolio from "./portfolio";
+import Experience from "./Experience";
 import About from "./About";
 import Contact from "./Contact";
 import Footer from "./Footer";
@@ -23,6 +24,7 @@ export default function App() {
           <Hero />
           <SkillsLoop />
           <Portfolio />
+          <Experience />
           <About />
           <Contact />
         </main>

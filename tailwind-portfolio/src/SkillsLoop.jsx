@@ -4,28 +4,26 @@ import LogoLoop from "./LogoLoop";
 import {
   SiReact,
   SiNextdotjs,
+  SiVuedotjs,
+  SiNuxtdotjs,
   SiTypescript,
   SiTailwindcss,
   SiPython,
-  SiMysql,
-  SiMongodb,
-  SiTableau,
+  SiPostgresql,
+  SiFirebase,
   SiGithub,
-  SiFramer,
-  SiVite,
 } from "react-icons/si";
 
 const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },
   { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+  { node: <SiVuedotjs />, title: "Vue", href: "https://vuejs.org" },
+  { node: <SiNuxtdotjs />, title: "Nuxt", href: "https://nuxt.com" },
   { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
   { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
-  { node: <SiFramer />, title: "Framer Motion", href: "https://www.framer.com/motion/" },
-  { node: <SiVite />, title: "Vite", href: "https://vitejs.dev" },
   { node: <SiPython />, title: "Python", href: "https://www.python.org" },
-  { node: <SiMysql />, title: "MySQL", href: "https://www.mysql.com" },
-  { node: <SiMongodb />, title: "MongoDB", href: "https://www.mongodb.com" },
-  { node: <SiTableau />, title: "Tableau", href: "https://www.tableau.com" },
+  { node: <SiPostgresql />, title: "PostgreSQL", href: "https://www.postgresql.org" },
+  { node: <SiFirebase />, title: "Firebase", href: "https://firebase.google.com" },
   { node: <SiGithub />, title: "GitHub", href: "https://github.com" },
 ];
 

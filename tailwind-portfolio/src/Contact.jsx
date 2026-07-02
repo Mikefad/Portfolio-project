@@ -87,7 +87,8 @@ export default function Contact() {
           className="rounded-2xl border border-slate-300 bg-white/5 p-6 backdrop-blur"
         >
           <p className="text-slate-600">
-            I’m open to internships, freelance engagements, and junior roles. Send a note — I respond quickly.
+            I’m available for product engineering roles, startup collaborations, and selected full-stack projects.
+            Send a note with the problem you are solving and where you need support.
           </p>
           <div className="mt-6 grid gap-3 text-sm text-slate-700">
             <div className="flex items-center gap-3"><Phone size={16} /> +234 81 6438 5796</div>

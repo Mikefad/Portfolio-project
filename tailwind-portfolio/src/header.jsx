@@ -29,7 +29,7 @@ export default function Header() {
   );
 
   // === Résumé URLs ===
-  const LOCAL_RESUME = "/MICHAEL FADAIRO - CV.pdf"; // served from /public
+  const LOCAL_RESUME = "/Michael%20Fadairo%20CV.pdf"; // served from /public
   const DRIVE_RESUME =
     "https://drive.google.com/uc?export=download&id=1FbKjH6XYPqlb1oHGO-tgJ7l57istC2YV"; // direct download fallback
 
@@ -83,6 +83,7 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-3">
           <div className="flex items-center gap-8 text-sm">
             <NavItem to="portfolio">Portfolio</NavItem>
+            <NavItem to="experience">Experience</NavItem>
             <NavItem to="about">About</NavItem>
             <NavItem to="contact">Contact</NavItem>
             <a
@@ -143,6 +144,7 @@ export default function Header() {
             <ul className="grid gap-3 text-sm">
               <li><NavItem to="hero">Home</NavItem></li>
               <li><NavItem to="portfolio">Portfolio</NavItem></li>
+              <li><NavItem to="experience">Experience</NavItem></li>
               <li><NavItem to="about">About</NavItem></li>
               <li><NavItem to="contact">Contact</NavItem></li>
             </ul>

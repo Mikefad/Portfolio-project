@@ -5,114 +5,61 @@ import { ExternalLink } from "lucide-react";
 import TiltCard from "./effects/TiltCard";
 import Particles from "./Particles";
 
-import consultingImg from "./assets/Screenshot (168).png";
-// import financeHotelVidLocal from "./assets/Vite + React - Google Chrome 2025-05-07 23-01-28.mp4";
-import deliveryLandingImg from "./assets/Screenshot (192).png";
-import ecommerceAlcoholImg from "./assets/Screenshot (170).png";
-import airbnbDashImg from "./assets/Screenshot (64).png";
-import figmaProjectImg from "./assets/Screenshot (97).png";
-import automationBotImg from "./assets/Screenshot (107).png";
-
-import wheelSpinnerImg from "./assets/Screenshot (163).png";
-import magicLetterImg from "./assets/Screenshot (178).png";
-
-const FINANCE_VIDEO =
-  "https://res.cloudinary.com/dcbk2d6pl/video/upload/f_auto,q_auto:eco/Vite_React_-_Google_Chrome_2025-05-07_23-01-28_jnquiw.mp4";
+import codeBoltImg from "./assets/Screenshot 2026-03-11 130820.png";
+import resortImg from "./assets/Screenshot 2026-03-11 143029.png";
+import resumeStudioImg from "./assets/Screenshot 2025-12-27 180048.png";
+import financeVideo from "./assets/Video Project 1.mp4";
 
 const projects = [
   {
-    title: "Finance Dashboard for Hotel Business",
+    title: "Hotel Finance Manager",
     blurb:
-      "Interactive finance KPIs (ROE, margin), charts, and report views for hotel operations with a friendly UI.",
-    tech: ["React", "Python", "MySQL"],
+      "A full-stack financial platform for tracking revenue, profit margins, ROE, and operational reports through an accessible business dashboard.",
+    tech: ["React", "Flask", "MySQL"],
     href: "https://finance-manager-snowy.vercel.app/login",
-    videoSrc: FINANCE_VIDEO,
+    videoSrc: financeVideo,
     featured: true,
     newTag: true,
   },
   {
-    title: "Business Website for Consulting Agency",
+    title: "CodeBolt Systems — Automation & Micro-SaaS Platform",
     blurb:
-      "Sleek multi-page site with services, case studies, and contact flow. Fast, responsive, and SEO-friendly.",
-    tech: ["React", "Firebase", "Tailwind"],
-    href: "https://consulting-agency-website-rmfk.vercel.app/",
-    imageSrc: consultingImg,
+      "The product and service platform I founded to deliver AI micro-tools, workflow automation, operational dashboards, and focused software for growing teams.",
+    tech: ["Next.js", "Python", "Firebase", "PostgreSQL"],
+    imageSrc: codeBoltImg,
     featured: true,
     newTag: true,
   },
   {
-    title: "Custom Delivery Service Landing Page",
+    title: "Resume Studio — Analyser & Generator",
     blurb:
-      "Conversion-focused landing page with hero CTA, feature highlights, and contact capture.",
-    tech: ["React", "Tailwind"],
-    href: "https://delivery-service-website.vercel.app/",
-    imageSrc: deliveryLandingImg,
+      "An AI-assisted workspace that evaluates resumes against target roles, produces actionable recommendations, and generates tailored CV drafts ready for export.",
+    tech: ["React", "Python", "AI Integration", "PDF Generation"],
+    imageSrc: resumeStudioImg,
+    imageFit: "contain",
+    featured: true,
     newTag: true,
   },
   {
-    title: "Custom E-commerce for Alcohol Distribution",
+    title: "Azure Haven — Modern Resort Website",
     blurb:
-      "Product catalog, cart, and checkout prototype with admin-friendly product management.",
-    tech: ["React", "Node", "MongoDB"],
-    href: "https://alcohol-companywebsite.vercel.app/",
-    imageSrc: ecommerceAlcoholImg,
+      "A premium, responsive hospitality website with immersive destination storytelling, suite discovery, and a streamlined booking experience.",
+    tech: ["React", "Responsive UI", "Booking UX"],
+    imageSrc: resortImg,
+    featured: true,
     newTag: true,
-  },
-  {
-    title: "Airbnb Data Dashboard (Seattle Market)",
-    blurb:
-      "Pricing trends, availability and neighborhood insights with an interactive Tableau dashboard.",
-    tech: ["Tableau", "Excel"],
-    href: "https://public.tableau.com/app/profile/michael.fadairo/viz/firstdataanalysis/Dashboard1",
-    imageSrc: airbnbDashImg,
-    newTag: true,
-  },
-  {
-    title: "Figma → Pixel-Perfect Website",
-    blurb:
-      "Converted UI from Figma to a live, responsive site with animations and clean components.",
-    tech: ["React", "Tailwind", "Vercel"],
-    href: "https://raintor-project.vercel.app/",
-    imageSrc: figmaProjectImg,
-  },
-  {
-    title: "Zoom Bot Automation",
-    blurb:
-      "Python bot that joins Zoom meetings automatically using schedules and credentials.",
-    tech: ["Python", "Selenium", "Schedule"],
-    href: "https://github.com/Mikefad/zoom-bot-automation",
-    imageSrc: automationBotImg,
-  },
-  {
-    title: "Custom Wheel Spinner (Admin Controls)",
-    blurb:
-      "Prize wheel with weighted outcomes, cooldowns, and admin panel for managing items, odds, play limits, and audit logs.",
-    tech: ["React", "Express", "MongoDB", "Tailwind", "JWT"],
-    href: "https://custom-wheel-lovat.vercel.app/",
-    imageSrc: wheelSpinnerImg,
-  },
-  {
-    title: "Magic Letter — Digital Message Generator",
-    blurb:
-      "Transforms any message into a beautiful, animated digital letter with templates, share links, and export.",
-    tech: ["React", "Framer Motion", "Tailwind"],
-    href: "https://magic-letter-chi.vercel.app/",
-    imageSrc: magicLetterImg,
   },
 ];
 
 function ProjectCard({ p, i }) {
   return (
     <TiltCard>
-      <motion.a
-        href={p.href || "#"}
-        target={p.href ? "_blank" : undefined}
-        rel={p.href ? "noreferrer" : undefined}
+      <motion.article
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: i * 0.04 }}
-        className="group block overflow-hidden rounded-2xl border border-slate-300 bg-white/5 backdrop-blur hover:border-slate-400 transition"
+        className="group h-full overflow-hidden rounded-2xl border border-slate-300 bg-white/30 backdrop-blur transition hover:border-slate-400 hover:bg-white/50"
       >
         <div className="relative aspect-[16/10] overflow-hidden">
           {p.videoSrc ? (
@@ -129,15 +76,25 @@ function ProjectCard({ p, i }) {
             <img
               src={p.imageSrc}
               alt={p.title}
-              className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+              className={`h-full w-full transition duration-300 group-hover:scale-[1.03] ${
+                p.imageFit === "contain"
+                  ? "bg-slate-950 object-contain"
+                  : "object-cover"
+              }`}
               loading="lazy"
               decoding="async"
             />
           ) : (
-            <div className="h-full w-full bg-gradient-to-br from-slate-900 to-black" />
+            <div className="flex h-full w-full flex-col justify-end bg-gradient-to-br from-slate-950 via-indigo-950 to-blue-700 p-6 text-white">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-200">
+                {p.label || "Product build"}
+              </span>
+              <span className="mt-2 max-w-sm text-2xl font-bold leading-tight">{p.title}</span>
+              <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full border border-white/20" />
+              <div className="pointer-events-none absolute -right-3 -top-3 h-24 w-24 rounded-full border border-white/15" />
+            </div>
           )}
 
-          {/* badges — only border color changed */}
           <div className="absolute left-3 top-3 flex gap-2">
             {p.featured && (
               <span className="rounded-full bg-indigo-500/20 border border-indigo-300 px-2 py-1 text-[10px] uppercase tracking-wide">
@@ -151,7 +108,7 @@ function ProjectCard({ p, i }) {
             )}
           </div>
 
-          {!p.videoSrc && (
+          {p.imageSrc && (
             <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
           )}
         </div>
@@ -162,10 +119,17 @@ function ProjectCard({ p, i }) {
               <h3 className="text-lg font-semibold text-slate-900">{p.title}</h3>
               <p className="mt-2 text-sm text-slate-600">{p.blurb}</p>
             </div>
-            <ExternalLink
-              size={18}
-              className="text-slate-400 group-hover:text-slate-600 shrink-0 mt-1"
-            />
+            {p.href && (
+              <a
+                href={p.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Open ${p.title}`}
+                className="shrink-0 rounded-lg p-2 text-slate-400 transition hover:bg-white hover:text-indigo-700"
+              >
+                <ExternalLink size={18} />
+              </a>
+            )}
           </div>
           <div className="mt-4 flex flex-wrap gap-2">
             {p.tech?.map((t) => (
@@ -178,17 +142,12 @@ function ProjectCard({ p, i }) {
             ))}
           </div>
         </div>
-      </motion.a>
+      </motion.article>
     </TiltCard>
   );
 }
 
 export default function Portfolio() {
-  const ordered = [
-    ...projects.filter((p) => p.featured || p.newTag),
-    ...projects.filter((p) => !p.featured && !p.newTag),
-  ];
-
   return (
     <section id="portfolio" className="relative max-w-6xl mx-auto px-4 py-20">
       {/* particles untouched */}
@@ -221,12 +180,12 @@ export default function Portfolio() {
       {/* divider left as-is since it's bg; you asked for text/border only */}
       <div className="mt-2 h-px w-24 bg-white/10" />
       <p className="mt-4 max-w-2xl text-slate-600">
-        A curated selection of recent work — from polished websites to data dashboards and automation.
+        A focused selection of my strongest work across SaaS, AI-assisted tools, business systems, and customer-facing platforms.
       </p>
 
-      {ordered.some((p) => p.featured) && (
+      {projects.some((p) => p.featured) && (
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {ordered
+          {projects
             .filter((p) => p.featured)
             .map((p, i) => (
               <ProjectCard key={p.title} p={p} i={i} />
@@ -234,13 +193,15 @@ export default function Portfolio() {
         </div>
       )}
 
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {ordered
-          .filter((p) => !p.featured)
-          .map((p, i) => (
-            <ProjectCard key={p.title} p={p} i={i} />
-          ))}
-      </div>
+      {projects.some((p) => !p.featured) && (
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects
+            .filter((p) => !p.featured)
+            .map((p, i) => (
+              <ProjectCard key={p.title} p={p} i={i} />
+            ))}
+        </div>
+      )}
     </section>
   );
 }

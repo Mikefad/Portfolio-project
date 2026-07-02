@@ -34,51 +34,54 @@ const groups = [
   {
     title: "Frontend Development",
     items: [
-      { key: "html5", label: "HTML5", hex: "#E34F26" },
-      { key: "css3", label: "CSS3", hex: "#1572B6" },
-      { key: "javascript", label: "JavaScript (ES6+)", hex: "#F7DF1E" },
-      { key: "tailwindcss", label: "Tailwind CSS", hex: "#06B6D4" },
       { key: "react", label: "React.js", hex: "#61DAFB" },
+      { key: "nextdotjs", label: "Next.js", hex: "#000000" },
+      { key: "vuedotjs", label: "Vue.js", hex: "#4FC08D" },
+      { key: "nuxt", label: "Nuxt", hex: "#00DC82" },
+      { key: "typescript", label: "TypeScript", hex: "#3178C6" },
+      { key: "tailwindcss", label: "Tailwind CSS", hex: "#06B6D4" },
     ],
   },
   {
-    title: "Backend Development",
+    title: "Backend & APIs",
     items: [
-      { key: "php", label: "PHP", hex: "#777BB4" },
+      { key: "python", label: "Python / Flask", hex: "#3776AB" },
       { key: "nodedotjs", label: "Node.js", hex: "#339933" },
       { key: "express", label: "Express.js", hex: "#000000" },
-      { key: "auth0", label: "Authentication & Authorization", hex: "#EB5424" },
-      { key: "postman", label: "RESTful APIs / CRUD", hex: "#FF6C37" },
+      { key: "laravel", label: "Laravel", hex: "#FF2D20" },
+      { key: "dart", label: "Dart", hex: "#0175C2" },
+      { key: "postman", label: "RESTful APIs", hex: "#FF6C37" },
     ],
   },
   {
-    title: "Other Programming Languages",
+    title: "Databases & Validation",
     items: [
-      { key: "python", label: "Python", hex: "#3776AB" },
-      { key: "cplusplus", label: "C++", hex: "#00599C" },
-    ],
-  },
-  {
-    title: "Databases",
-    items: [
+      { key: "postgresql", label: "PostgreSQL", hex: "#4169E1" },
       { key: "mysql", label: "MySQL", hex: "#4479A1" },
       { key: "mongodb", label: "MongoDB", hex: "#47A248" },
+      { key: "prisma", label: "Prisma ORM", hex: "#2D3748" },
+      { key: "zod", label: "Zod", hex: "#3E67B1" },
     ],
   },
   {
-    title: "Version Control",
+    title: "Cloud, DevOps & Delivery",
     items: [
+      { key: "firebase", label: "Firebase", hex: "#DD2C00" },
+      { key: "googlecloud", label: "Google Cloud", hex: "#4285F4" },
+      { key: "vercel", label: "Vercel", hex: "#000000" },
+      { key: "docker", label: "Docker", hex: "#2496ED" },
+      { key: "gitlab", label: "GitLab CI/CD", hex: "#FC6D26" },
       { key: "git", label: "Git", hex: "#F05032" },
-      { key: "github", label: "GitHub", hex: "#181717" },
     ],
   },
   {
-    title: "Tools & Environments",
+    title: "Product Engineering",
     items: [
-      { key: "visualstudiocode", label: "VS Code", hex: "#007ACC" },
-      { key: "postman", label: "Postman", hex: "#FF6C37" },
-      { key: "npm", label: "npm", hex: "#CB3837" },
-      { key: "webpack", label: "Webpack", hex: "#8DD6F9" },
+      { key: "stripe", label: "Stripe Webhooks", hex: "#635BFF" },
+      { key: "json", label: "SDK & API Design", hex: "#000000" },
+      { key: "selenium", label: "Selenium", hex: "#43B02A" },
+      { key: "jest", label: "Jest", hex: "#C21325" },
+      { key: "github", label: "GitHub", hex: "#181717" },
     ],
   },
   {
@@ -88,7 +91,7 @@ const groups = [
       { key: "tableau", label: "Tableau", hex: "#E97627" },
       { key: "powerbi", label: "Power BI", hex: "#F2C811" },
       { key: "pandas", label: "Pandas (Python)", hex: "#150458" },
-      { key: "python", label: "Web Scraping", hex: "#3776AB" },
+      { key: "python", label: "Pandas", hex: "#3776AB" },
     ],
   },
 ];
@@ -168,20 +171,20 @@ export default function About() {
           className="md:col-span-2"
         >
           <p className="text-slate-600">
-            I’m <span className="font-semibold text-slate-900">Michael</span>, a full-stack web developer and
-            data-minded builder. I love translating real business problems into clean, fast, and accessible experiences.
-            I’ve shipped consulting sites, dashboards, small e-commerce flows, and little automations that save time.
+            I’m <span className="font-semibold text-slate-900">Michael Fadairo</span>, a full-stack developer,
+            SaaS product builder, and founder of CodeBolt Systems. I build software that helps early-stage teams
+            launch faster and helps businesses replace repetitive work with focused, usable systems.
           </p>
 
           <p className="text-slate-600 mt-4">
-            My toolbox includes <span className="font-medium text-slate-900">React, Tailwind, Node/Express, PHP, and Python</span>,
-            with data work in <span className="font-medium text-slate-900">Pandas, Excel, Tableau, and Power BI</span>.
-            I’m comfortable with auth, REST APIs, MongoDB/MySQL, and bringing ideas from Figma to production on Vercel.
-            I care about details, performance, and shipping things that people actually use.
+            My experience spans startup product development at <span className="font-medium text-slate-900">VentureSeed/AORTEM</span>,
+            enterprise technology at <span className="font-medium text-slate-900">Airtel Networks</span>, and full-stack
+            delivery at <span className="font-medium text-slate-900">ReadWrite Data Solutions</span>. That work includes
+            frontend platforms, developer SDKs, secure billing flows, cloud automation, REST APIs, and analytics dashboards.
           </p>
 
           <p className="text-slate-700 mt-6 font-medium">
-            Here are my skills down below:
+            Current technical toolkit
           </p>
 
           <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
